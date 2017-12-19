@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>首页</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/zzsc.css">
+<link rel="stylesheet" type="text/css" href="dist/jquery.vm-carousel.css">
+<script src="js/modernizr.js"></script>
+<style type="text/css">
+	h2 {
+		 margin-bottom: 40px;
+		 margin-top: 40px;
+	  }
+	  .vmc-centered{padding: 200px 0; }
+	  .vmc-centered img { transition: all 0.3s ease;
+	  	box-shadow:-3px 0px 3px #42454e,  
+       0px -3px 3px #42454e,
+       3px 0px 3px #42454e, 
+       0px 3px 3px #42454e; /*下边阴影*/ }
+	  .vmc-centered .vmc_active img { transform: scale(1.2); }
+	  .img1,.img2,.img3,.img4{
+	  	position: relative;
+	  }
+	  .img11,.img22,.img33,.img44{
+	  	/* float: left; */
+			width:45px;
+			height:45px;
+			background-image: url(img/play.png);
+			background-repeat: no-repeat;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+			z-index: 1000;
+			position: absolute;
+			top:60px;
+			left:80px;
+	  }
+	  .img11:hover,.img22:hover,.img33:hover,.img44:hover{
+	  		width:64px;
+			height:64px;
+	  }
+	  .videos,.videos1,.videos3,.videos4{
+	  	/* border: 1px solid red; */
+	  	padding:0;
+	  	margin:0;
+	  	width:540px;
+	  	height:auto;
+	  	display: none;
+	  	position: absolute;
+	  	top:-30px;
+	  	left:15px;
+	  	box-sizing:border-box;
+	  }
+	  .videos .one,.videos1 .one,.videos3 .one,.videos3 .one{
+	  	display: block;
+	  	padding:0;
+	  	margin:0;
+		width:450px;
+	  	height:300px;
+	  	border: 1px solid green;
+	  }
+	  .logo{
+	  	/* float: left; */
+	  	position: absolute;
+	  	top:0px;
+	  	left:0px;
+	  	background-image: url(img/logo.svg);
+	  	width:160px;
+	  	height:50px;
+	  	background-repeat: no-repeat;
+	  	-webkit-background-size: 100% 100%;
+	  	background-size: 100% 100%;
+	  }
+	  .box{
+	  	width:100%;
+	  	height:100%;
+	  	position: relative;
+	  }
+	   .title{
+	  	position: absolute;
+	  	top:20px;
+	  	left:160px;
+	  	color:#fff;
+	  }
+</style>
+
+</head>
+<body>
+<!-- <div class="logo"></div> -->
+<div class="box">
+	<div class="container">
+	   <ul class="vmcarousel-centered-infitine vmc-centered">
+	   		<li class="img1" ><div class="img11"></div><img src="img/finance.png"  alt="" width="450">
+	   		</li>
+		    <li class="img2">
+	    		<div class="img22"></div>
+	    		<img src="img/marketing.png" alt="" width="450">
+		    </li>
+		    <li class="img3">
+		    	<div class="img33"></div>
+		    	<img src="img/user.png" alt="" width="450">
+		    </li>
+		    <li class="img4">
+		    	<div class="img44"></div>
+		    	<img src="img/data.gif" alt="" width="450">
+		    </li>
+	   </ul>
+	</div>
+</div>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="dist/jquery.vm-carousel.js"></script>
+<script type="text/javascript">
+	jQuery(function($){
+		  $('.vmcarousel-centered-infitine').vmcarousel({
+			 centered: true,
+			 start_item: 1,
+			 autoplay: false,
+			 infinite: true
+		  });
+	   });
+	
+	$(function(){
+		// 金融视频
+		$(".img11").click(function(){
+			window.location.href="finace.html"
+		})
+		// 跳转到精准营销视频页面
+		$(".img22").click(function(){
+			window.location.href="marketing.html"
+		})
+		// 跳转到用户标签视频页面
+		$(".img33").click(function(){
+			window.location.href="user.html"
+		})
+		// 跳转到数据能力开发平台视频页面
+		$(".img44").click(function(){
+			window.location.href="data.html"
+		})
+	})
+	
+</script>
+
+<!-- <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div> -->
+</body>
+</html>
